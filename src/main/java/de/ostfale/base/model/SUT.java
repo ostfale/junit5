@@ -15,9 +15,16 @@ public class SUT {
     private List<Job> jobs = new ArrayList<>();
     private Job currentJob;
 
+    public SUT() {
+    }
+
     public SUT(String systemName) {
         this.systemName = systemName;
         this.isVerified = false;
+    }
+
+    public boolean hasJobToRun() {
+        return currentJob != null;
     }
 
     public String getSystemName() {
@@ -42,6 +49,10 @@ public class SUT {
 
     public Job getCurrentJob() {
         return currentJob;
+    }
+
+    public void run(Job currentJob) {
+        this.currentJob = currentJob;
     }
 
     public void run() {

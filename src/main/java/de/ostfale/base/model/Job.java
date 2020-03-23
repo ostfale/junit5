@@ -11,6 +11,9 @@ import java.util.Objects;
 public class Job {
     private String name;
 
+    public Job() {
+    }
+
     public Job(String name) {
         this.name = name;
     }
