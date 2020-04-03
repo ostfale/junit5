@@ -31,7 +31,7 @@ public class RepeatedTests {
     @DisplayName("Test add operation")
     void addNumber() {
         Calculator calculator = new Calculator();
-        assertEquals(2, Calculator.add(1, 1), "1 + 1 should equal 2");
+        assertEquals(2, calculator.add(1, 1), "1 + 1 should equal 2");
     }
 
     @RepeatedTest(value = 5, name = "the list contains  {currentRepetition} elements(s), the set contains 1 element")
